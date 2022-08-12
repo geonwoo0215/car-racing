@@ -5,9 +5,9 @@ import java.util.Scanner;
 
 public class InputMessage {
 
-    private final String REQUEST_CAR_NAME = "경주할 자동차 이름을 입력하세요.(이름은 쉼표(,) 기준으로 구분)";
-    private final String REQUEST_ATTEMPT = "시도할 회수는 몇회인가요?";
-    private final String ERROR_MESSAGE = "[ERROR] 공백은 입력할 수 없습니다.";
+    private static final String REQUEST_CAR_NAME = "경주할 자동차 이름을 입력하세요.(이름은 쉼표(,) 기준으로 구분)";
+    private static final String REQUEST_ATTEMPT = "시도할 회수는 몇회인가요?";
+    private static final String ERROR_MESSAGE = "[ERROR] 공백은 입력할 수 없습니다.";
     private final Scanner SCANNER = new Scanner(System.in);
 
     public void requestCarName() {

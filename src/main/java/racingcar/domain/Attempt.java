@@ -2,8 +2,8 @@ package racingcar.domain;
 
 public class Attempt {
 
-    private final String ERROR_INTEGER = "[ERROR] 시도횟수는 정수여야 합니다.";
-    private final String ERROR_NEGATIVE = "[ERROR] 양의정수를 입력해야 합니다.";
+    private static final String ERROR_INTEGER = "[ERROR] 시도횟수는 정수여야 합니다.";
+    private static final String ERROR_NEGATIVE = "[ERROR] 양의정수를 입력해야 합니다.";
 
     private int attempt;
 
