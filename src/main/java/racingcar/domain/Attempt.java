@@ -7,17 +7,25 @@ public class Attempt {
 
     private int attempt;
 
+    public int getAttempt() {
+        return attempt;
+    }
+
+    public Attempt(String attempt) {
+        validate(attempt);
+    }
+
     public void validate(String attempt) {
         validateInteger(attempt);
         validateNegative(attempt);
         this.attempt = toInteger(attempt);
     }
 
-    public int toInteger(String attempt) {
+    private int toInteger(String attempt) {
         return Integer.parseInt(attempt);
     }
 
-    public void validateInteger(String attempt) {
+    private void validateInteger(String attempt) {
         try {
             this.toInteger(attempt);
         } catch (NumberFormatException e) {
@@ -25,8 +33,8 @@ public class Attempt {
         }
     }
 
-    public void validateNegative(String attempt) {
-        if (toInteger(attempt) > 0){
+    private void validateNegative(String attempt) {
+        if (toInteger(attempt) < 0){
             throw new IllegalArgumentException(ERROR_NEGATIVE);
         }
     }
